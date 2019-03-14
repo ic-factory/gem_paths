@@ -7,8 +7,16 @@ Feature: List
 
   Scenario: Default output should be the GNU Make format
     When I run `gempaths list`
-    Then the output should contain "gempath(bundler) := "
+    Then the output should contain "gem-path-bundler := "
 
-#  Scenario: GNU Make output
-#    When I run `gempaths list --format=make`
-#    Then the output should contain "gempath(bundler) := "
+  Scenario: Specify make format
+    When I run `gempaths list --format=make`
+    Then the output should contain "gem-path-bundler := "
+
+  Scenario: Specify yaml format
+    When I run `gempaths list --format=yaml`
+    Then the output should contain "---\ngem:\n  path:\n    "
+
+  Scenario: Specify json format
+    When I run `gempaths list --format=json`
+    Then the output should contain "["

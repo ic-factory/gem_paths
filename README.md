@@ -1,6 +1,6 @@
 # GemPaths
 
-List gem can display the paths to the gems you have installed using Bundler - and display them in eg. GNU Make format.
+GemPaths can display the paths to the gems Bundler has/will install. It can display the paths in different formats (currently GNU Make, YAML and JSON format) and optionally display a warning if one or more of the gems have not yet been installed.
 
 ## Installation
 
@@ -30,7 +30,7 @@ To display the path for each installed gem, do:
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` and `cucumber features` 
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` and `cucumber features`
 to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To install your local copy of this gem onto your local machine, run `bundle exec rake install`.
