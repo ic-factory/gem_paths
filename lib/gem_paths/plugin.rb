@@ -1,3 +1,5 @@
+require 'gem_paths/list'
+
 module GemPaths
   module Plugin
 
@@ -10,6 +12,8 @@ module GemPaths
 
         Bundler::Plugin.add_hook('after-install-all') do |spec_install|
           puts "Installation has finished - from gem_paths"
+          puts GemPaths::List.to_make
+
         end
       end
 
