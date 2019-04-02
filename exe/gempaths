@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+#Legacy command name. It will be removed in version 1.0.0.
+#Use 'gem_paths' command instead
 require 'gem_paths/cli'
 
 GemPaths::CLI.start
