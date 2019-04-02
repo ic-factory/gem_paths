@@ -19,12 +19,5 @@ module GemPaths
       end
     end
 
-    class Command
-      # Register this class as a handler for the `my_command` command
-      Bundler::Plugin::API.command('gem_paths', self)
-      def exec(command_name, args)
-        puts "You called " + command_name + " with args: " + args.inspect
-      end
-    end
   end
 end
