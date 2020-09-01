@@ -16,7 +16,7 @@ RSpec.describe GemPaths do
 
   it "can return JSON formatted list" do
     #Poor mans verification for now ...
-    expect(GemPaths::List.to_json).to start_with("[\n  [\n    \"")
+    expect(GemPaths::List.to_json).to start_with("{\n  \"")
   end
 
 end
