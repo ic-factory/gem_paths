@@ -23,7 +23,7 @@ module GemPaths
 
     def self.to_json
       require 'json'
-      JSON.pretty_generate(gem_name_path_map)
+      JSON.pretty_generate(Hash[*gem_name_path_map.flatten])
     end
 
   end

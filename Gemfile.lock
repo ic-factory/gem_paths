@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gem_paths (0.2.0)
+    gem_paths (0.3.0)
       bundler (~> 2.0)
       thor (~> 0.20)
 
