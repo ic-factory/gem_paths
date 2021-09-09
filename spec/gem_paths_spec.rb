@@ -11,7 +11,7 @@ RSpec.describe GemPaths do
 
   it "can return SH formatted list" do
     #Poor mans verification for now ...
-    expect(GemPaths::List.to_sh).to all(match /export gem-path-[a-zA-Z0-9_-]+=\/[a-zA-Z0-9]+/)
+    expect(GemPaths::List.to_sh).to all(match /export gem_path_[a-zA-Z0-9_]+=\"\/[a-zA-Z0-9]+/)
     expect(GemPaths::List.to_sh.length).to be > 1
   end
 

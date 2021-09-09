@@ -15,7 +15,7 @@ module GemPaths
     end
 
     def self.to_sh
-      gem_name_path_map.map { |pair| "export gem-path-#{pair[0]}=#{pair[1]}" }
+      gem_name_path_map.map { |pair| "export gem_path_#{pair[0].gsub('-','_')}=\"#{pair[1]}\"" }
     end
 
     def self.to_yaml

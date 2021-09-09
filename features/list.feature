@@ -11,11 +11,11 @@ Feature: List
 
   Scenario: Specify make format
     When I run `gempaths list --format=make`
-    Then the output should contain "gem-path-bundler := "
+    Then the output should contain "export gem-path-bundler := "
 
   Scenario: Specify sh format
     When I run `gempaths list --format=sh`
-    Then the output should contain "gem-path-bundler="
+    Then the output should contain "export gem_path_bundler="
 
   Scenario: Specify yaml format
     When I run `gempaths list --format=yaml`
