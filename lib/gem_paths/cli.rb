@@ -17,6 +17,8 @@ module GemPaths
           puts GemPaths::List.to_json
         when 'make'
           puts GemPaths::List.to_make
+        when 'sh'
+          say GemPaths::List.to_sh
         else
           shell.error set_color("Invalid value for --format option. Try 'gempaths help list' for more info.", Thor::Shell::Color::RED)
           exit(2)

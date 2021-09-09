@@ -30,7 +30,11 @@ To display the path for each installed gem, do:
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` and `cucumber features`
+After checking out the repo, run `bin/setup` to install dependencies. Then, run :
+
+    $ bundle exec rspec
+    $ bundle exec cucumber features
+
 to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To install your local copy of this gem onto your local machine, run `bundle exec rake install`.

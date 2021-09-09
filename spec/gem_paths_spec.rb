@@ -9,6 +9,12 @@ RSpec.describe GemPaths do
     expect(GemPaths::List.to_make.length).to be > 1
   end
 
+  it "can return SH formatted list" do
+    #Poor mans verification for now ...
+    expect(GemPaths::List.to_sh).to all(match /export gem-path-[a-zA-Z0-9_-]+=\/[a-zA-Z0-9]+/)
+    expect(GemPaths::List.to_sh.length).to be > 1
+  end
+
   it "can return YAML formatted list" do
     #Poor mans verification for now ...
     expect(GemPaths::List.to_yaml).to start_with("---\ngem:\n  path:\n    ")
@@ -16,7 +22,8 @@ RSpec.describe GemPaths do
 
   it "can return JSON formatted list" do
     #Poor mans verification for now ...
-    expect(GemPaths::List.to_json).to start_with("{\n  \"")
+    expect(GemPaths::List.to_json).to start_with("{\n  \"aruba\": \"")
   end
+
 
 end

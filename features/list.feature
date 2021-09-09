@@ -13,10 +13,15 @@ Feature: List
     When I run `gempaths list --format=make`
     Then the output should contain "gem-path-bundler := "
 
+  Scenario: Specify sh format
+    When I run `gempaths list --format=sh`
+    Then the output should contain "gem-path-bundler="
+
   Scenario: Specify yaml format
     When I run `gempaths list --format=yaml`
     Then the output should contain "---\ngem:\n  path:\n    "
 
   Scenario: Specify json format
     When I run `gempaths list --format=json`
-    Then the output should contain "["
+    Then the output should contain "{"
+     
